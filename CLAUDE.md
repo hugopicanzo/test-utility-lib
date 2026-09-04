@@ -1,3 +1,2 @@
 # test-utility-lib
-
-Standard Python project. Review code changes.
+Standard project. Review the code changes.
