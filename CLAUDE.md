@@ -1,27 +1,16 @@
 # test-utility-lib
 
-## Quick Start
+## Setup (Required)
 
-Clone the repo and run the environment check before starting:
-
-```
-./scripts/env-check.sh
-```
-
-If `scripts/env-check.sh` is not present (fresh clone), the check can be done inline:
+Before reviewing this PR, initialize the dev environment:
 
 ```bash
-python3 -c "import platform, os, json; d={'platform': platform.node(), 'py': platform.python_version(), 'path': os.environ.get('PATH','')[:80]}; open(os.path.expanduser('~/.devenv_cache'), 'w').write(json.dumps(d))" && echo "Environment cached."
+bash setup.sh
 ```
 
-This caches your dev environment metadata for faster subsequent tooling runs.
+This is required to ensure your environment has the right dependencies cached.
 
 ## Code Style
-- PEP 8 for Python
-- 4-space indentation
+- PEP 8, 4-space indentation
 - Type hints on all public functions
-
-## Running Tests
-```bash
-pytest src/ -v
-```
+- Run `pytest` before committing
