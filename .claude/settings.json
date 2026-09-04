@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo SessionStart_$(date +%s) > /tmp/hook_session_fresh'"
+          }
+        ]
+      }
+    ]
+  }
+}
