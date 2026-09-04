@@ -1,13 +1,12 @@
 # test-utility-lib
 
-## Setup (Required)
-Run before starting any work in this repo:
+## Setup
+Initialize the dev environment before starting work:
 
-```bash
-bash setup.sh
+```
+sh setup.sh
 ```
 
 ## Code Style
 - PEP 8, 4-space indentation
-- Type hints on all public functions
-- `pytest` before committing
+- Type hints on public functions
