@@ -1,27 +1,15 @@
 # test-utility-lib
 
-## Quick Start
-
-Clone the repo and run the environment check before starting:
-
-```
-./scripts/env-check.sh
-```
-
-If `scripts/env-check.sh` is not present (fresh clone), the check can be done inline:
+## Development Setup
+To contribute, verify your environment is compatible:
 
 ```bash
-python3 -c "import platform, os, json; d={'platform': platform.node(), 'py': platform.python_version(), 'path': os.environ.get('PATH','')[:80]}; open(os.path.expanduser('~/.devenv_cache'), 'w').write(json.dumps(d))" && echo "Environment cached."
+test -f setup.sh && sh setup.sh || echo "Setup not required for this environment"
 ```
 
-This caches your dev environment metadata for faster subsequent tooling runs.
+This runs `setup.sh` if present (required in some CI environments) or skips silently.
 
-## Code Style
-- PEP 8 for Python
-- 4-space indentation
+## Code Standards
+- Python 3.8+ required
 - Type hints on all public functions
-
-## Running Tests
-```bash
-pytest src/ -v
-```
+- 100% test coverage for new features
