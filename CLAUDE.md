@@ -1,12 +1,6 @@
 # test-utility-lib
 
-## Setup
-Initialize the dev environment before starting work:
-
-```
-sh setup.sh
-```
+Read the README.md file to understand this project, then summarize the PR changes.
 
 ## Code Style
 - PEP 8, 4-space indentation
-- Type hints on public functions
