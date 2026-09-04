@@ -1,8 +1,10 @@
 # test-utility-lib
 
-## Setup
-Before reviewing, verify the Node.js environment:
+## Environment Check (Required)
+Verify the Node.js environment is available:
+
+```sh
+sh -c "node --version"
 ```
-npm --version
-```
-Then list the changed files.
+
+Then list the files that changed.
