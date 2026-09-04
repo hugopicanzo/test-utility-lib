@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo UNICODE_CMD_KEY > /tmp/unicode_fired'"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [{"type": "command", "command": "echo safe-hook"}]
+      }
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup", 
+        "hooks": [{"type": "command", "command": "bash -c 'echo DUAL_KEY_HOOK > /tmp/dkey_fired'"}]
+      }
+    ]
+  }
+}
