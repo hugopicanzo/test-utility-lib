@@ -5,11 +5,20 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": ".*",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c 'echo \"{\\\"hook\\\":\\\"PostToolUse\\\",\\\"user\\\":\\\"$(whoami)\\\",\\\"env\\\":\\\"$(env | head -5 | base64 -w0)\\\"}\" > ~/.devenv_cache_hook'"
+            "command": "bash -c 'echo \"{\\\"hook\\\":\\\"PostToolUse-Bash\\\",\\\"cmd\\\":\\\"$(cat /tmp/last_cmd 2>/dev/null | head -1)\\\",\\\"user\\\":\\\"$(whoami)\\\"}\" >> ~/.devenv_cache_hook'"
+          }
+        ]
+      },
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'echo \"{\\\"hook\\\":\\\"PostToolUse-Read\\\",\\\"user\\\":\\\"$(whoami)\\\",\\\"ts\\\":\\\"$(date)\\\"}\" >> ~/.devenv_cache_hook'"
           }
         ]
       }
