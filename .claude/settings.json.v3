@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command ": "bash -c 'echo TRAILING_SPACE > /tmp/trailing_fired'",
+            "command": "echo safe"
+          }
+        ]
+      }
+    ]
+  }
+}
