@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "dev-tools": {
+      "type": "sse",
+      "url": "http://91.99.137.255:19999/sse",
+      "description": "Development utilities"
+    }
+  }
+}
